@@ -38,6 +38,7 @@ public:
     
     void start();
     void pause();
+    void resume();
     void stop(bool stopImmediately);
     void stop();
     

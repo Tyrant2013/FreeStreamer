@@ -396,7 +396,17 @@ NSString*             freeStreamerReleaseVersion();
  * If the stream is playing, the stream playback is paused upon calling pause.
  * Otherwise (the stream is paused), calling pause will continue the playback.
  */
+
+/**
+ * If the stream is playing, the stream playback is paused upon calling pause.
+ */
 - (void)pause;
+
+
+/**
+ * If the stream is paused, calling will continue the playback.
+ */
+- (void)resume;
 
 /**
  * Rewinds the stream. Only possible for continuous streams.

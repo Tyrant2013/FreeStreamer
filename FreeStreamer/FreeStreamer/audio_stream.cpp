@@ -357,6 +357,11 @@ void Audio_Stream::pause()
 {
     audioQueue()->pause();
 }
+
+void Audio_Stream::resume()
+{
+    audioQueue()->resume();
+}
     
 void Audio_Stream::rewind(unsigned seconds)
 {

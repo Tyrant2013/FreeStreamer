@@ -293,6 +293,7 @@ public:
 - (void)stop;
 - (BOOL)isPlaying;
 - (void)pause;
+- (void)resume;
 - (void)rewind:(unsigned)seconds;
 - (void)seekToOffset:(float)offset;
 - (float)currentVolume;
@@ -348,10 +349,11 @@ public:
 #endif
         
 #if (__IPHONE_OS_VERSION_MIN_REQUIRED >= 60000)
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(interruptionOccurred:)
-                                                     name:AVAudioSessionInterruptionNotification
-                                                   object:nil];
+//        不要监听打断，这里处理不完整
+//        [[NSNotificationCenter defaultCenter] addObserver:self
+//                                                 selector:@selector(interruptionOccurred:)
+//                                                     name:AVAudioSessionInterruptionNotification
+//                                                   object:nil];
 #endif
     }
     return self;
@@ -991,12 +993,12 @@ public:
                                    selector:@selector(notifyRetryingStarted)
                                    userInfo:nil
                                     repeats:NO];
-    
-    [NSTimer scheduledTimerWithTimeInterval:1
-                                     target:self
-                                   selector:@selector(play)
-                                   userInfo:nil
-                                    repeats:NO];
+//    重试后不要自动播放
+//    [NSTimer scheduledTimerWithTimeInterval:1
+//                                     target:self
+//                                   selector:@selector(play)
+//                                   userInfo:nil
+//                                    repeats:NO];
     
     self.retryCount++;
 }
@@ -1064,6 +1066,11 @@ public:
 {
     _wasPaused = YES;
     _audioStream->pause();
+}
+
+- (void)resume {
+    _wasPaused = NO;
+    _audioStream->resume();
 }
 
 - (void)rewind:(unsigned int)seconds
@@ -1453,6 +1460,13 @@ public:
     NSAssert([NSThread isMainThread], @"FSAudioStream.pause needs to be called in the main thread");
     
     [_private pause];
+}
+
+- (void)resume
+{
+    NSAssert([NSThread isMainThread], @"FSAudioStream.resume needs to be called in the main thread");
+    
+    [_private resume];
 }
 
 - (void)rewind:(unsigned int)seconds

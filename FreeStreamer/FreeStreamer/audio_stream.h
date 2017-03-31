@@ -65,6 +65,7 @@ public:
     void open(Input_Stream_Position *position);
     void close(bool closeParser);
     void pause();
+    void resume();
     void rewind(unsigned seconds);
     
     void startCachedDataPlayback();

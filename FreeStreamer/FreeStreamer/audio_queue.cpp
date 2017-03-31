@@ -116,7 +116,12 @@ void Audio_Queue::pause()
             AQ_TRACE("%s: AudioQueuePause failed!\n", __PRETTY_FUNCTION__);
         }
         setState(PAUSED);
-    } else if (m_state == PAUSED) {
+    }
+}
+    
+void Audio_Queue::resume()
+{
+    if (m_state == PAUSED) {
         AudioQueueStart(m_outAQ, NULL);
         setState(RUNNING);
     }

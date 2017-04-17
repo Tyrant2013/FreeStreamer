@@ -1,0 +1,68 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/zhuangxiaowei/iOSProjects/FreeStreamer/FreeStreamer/build/Release-iphoneos/FreeStreamer.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "FSAudioController.h",
+          'external-contents': "/Users/zhuangxiaowei/iOSProjects/FreeStreamer/FreeStreamer/FreeStreamer/FSAudioController.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSAudioStream.h",
+          'external-contents': "/Users/zhuangxiaowei/iOSProjects/FreeStreamer/FreeStreamer/FreeStreamer/FSAudioStream.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSCheckContentTypeRequest.h",
+          'external-contents': "/Users/zhuangxiaowei/iOSProjects/FreeStreamer/FreeStreamer/FreeStreamer/FSCheckContentTypeRequest.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSParsePlaylistRequest.h",
+          'external-contents': "/Users/zhuangxiaowei/iOSProjects/FreeStreamer/FreeStreamer/FreeStreamer/FSParsePlaylistRequest.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSParseRssPodcastFeedRequest.h",
+          'external-contents': "/Users/zhuangxiaowei/iOSProjects/FreeStreamer/FreeStreamer/FreeStreamer/FSParseRssPodcastFeedRequest.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSPlaylistItem.h",
+          'external-contents': "/Users/zhuangxiaowei/iOSProjects/FreeStreamer/FreeStreamer/FreeStreamer/FSPlaylistItem.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSXMLHttpRequest.h",
+          'external-contents': "/Users/zhuangxiaowei/iOSProjects/FreeStreamer/FreeStreamer/FreeStreamer/FSXMLHttpRequest.h"
+        },
+        {
+          'type': 'file',
+          'name': "FreeStreamer-Swift.h",
+          'external-contents': "/Users/zhuangxiaowei/iOSProjects/FreeStreamer/FreeStreamer/build/Release-iphoneos/FreeStreamer.framework/Headers/FreeStreamer-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "FreeStreamer.h",
+          'external-contents': "/Users/zhuangxiaowei/iOSProjects/FreeStreamer/FreeStreamer/FreeStreamer/FreeStreamer.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/zhuangxiaowei/iOSProjects/FreeStreamer/FreeStreamer/build/Release-iphoneos/FreeStreamer.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/zhuangxiaowei/iOSProjects/FreeStreamer/FreeStreamer/build/FreeStreamer.build/Release-iphoneos/FreeStreamer.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

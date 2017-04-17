@@ -307,11 +307,14 @@ CFReadStreamRef HTTP_Stream::createReadStream(CFURLRef url)
     CFHTTPMessageSetHeaderFieldValue(request, icyMetaDataHeader, icyMetaDataValue);
     
     if (m_position.start > 0 && m_position.end > m_position.start) {
-        CFStringRef rangeHeaderValue = CFStringCreateWithFormat(NULL,
-                                                                NULL,
-                                                                CFSTR("bytes=%llu-%llu"),
-                                                                m_position.start,
-                                                                m_position.end);
+        /// fix: m_position.end is error, must set to m_position.end - 1,
+        /// m_position.end is content length, but need last byte position, is m_position.end - 1
+//        CFStringRef rangeHeaderValue = CFStringCreateWithFormat(NULL,
+//                                                                NULL,
+//                                                                CFSTR("bytes=%llu-%llu"),
+//                                                                m_position.start,
+//                                                                m_position.end);
+        CFStringRef rangeHeaderValue = CFStringCreateWithFormat(NULL, NULL, CFSTR("bytes=%llu-"), m_position.start);
         
         CFHTTPMessageSetHeaderFieldValue(request, httpRangeHeader, rangeHeaderValue);
         CFRelease(rangeHeaderValue);

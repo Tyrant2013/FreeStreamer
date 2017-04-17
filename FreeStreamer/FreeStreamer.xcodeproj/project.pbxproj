@@ -10,7 +10,7 @@
 		961650811C6DE8BF0004B190 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 961650801C6DE8BF0004B190 /* Reachability.h */; };
 		963D6C7C1C6DF66500A0CEDA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963D6C7B1C6DF66500A0CEDA /* MediaPlayer.framework */; };
 		963D6C7E1C6DF66D00A0CEDA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963D6C7D1C6DF66D00A0CEDA /* UIKit.framework */; };
-		964CB0931C6DE6A100C84F53 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964CB0921C6DE6A100C84F53 /* CFNetwork.framework */; };
+		964CB0931C6DE6A100C84F53 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964CB0921C6DE6A100C84F53 /* CFNetwork.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		964CB0951C6DE6AA00C84F53 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964CB0941C6DE6AA00C84F53 /* AudioToolbox.framework */; };
 		964CB0971C6DE6B300C84F53 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964CB0961C6DE6B300C84F53 /* AVFoundation.framework */; };
 		964CB0991C6DE6BE00C84F53 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 964CB0981C6DE6BE00C84F53 /* libxml2.tbd */; };
@@ -402,6 +402,7 @@
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = FreeStreamer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.zxw.FreeStreamer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -423,6 +424,7 @@
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = FreeStreamer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.zxw.FreeStreamer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
